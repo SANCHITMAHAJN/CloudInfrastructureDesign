@@ -7,6 +7,8 @@ This project gets user requirements via Google Form and automatically creates in
  Our client sends us their access keys via email and we put them in our terraform script provider.tf. This can be changed for each client using CI.
  
  Step 1 - We send a Google form to our client asking if they want to create some basic features in their AWS Account. It should look something like this:
+ 
+ 
 <img width="249" alt="image" src="https://user-images.githubusercontent.com/108757980/206533575-3b587976-abcc-41a3-b5fa-b3473242907d.png">
 <img width="294" alt="image" src="https://user-images.githubusercontent.com/108757980/206533738-1f38ec32-6d2e-4a3b-9b95-f31a7e099b61.png">
 
