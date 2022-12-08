@@ -2,6 +2,11 @@
 This project gets user requirements via Google Form and automatically creates infrastructure in AWS based on the responses using Python, Jenkins, and Terraform.
 
 
+
+<img width="528" alt="image" src="https://user-images.githubusercontent.com/108757980/206535660-00f7d49a-7167-4612-9b2c-1517fe25a02a.png">
+
+
+
 **How does it Work?**
  
  Our client sends us their access keys via email and we put them in our terraform script provider.tf. This can be changed for each client using CI.
