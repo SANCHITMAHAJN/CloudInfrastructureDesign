@@ -18,7 +18,9 @@ This project gets user requirements via Google Form and automatically creates in
   Step 5 - We create IF scripts in Python  to run Jenkins builds based on answers for each QuestionID (fetched by Google API results)
   Step 6 - Using **jenkins** library in python, we run the command server.build_job to build those specific jobs in AWS
   Step 7 - After a minute, the infrastructure gets set up in AWS!
-  Step 8 - We have also configured the user to get email automatically on the account they mentioned in Google Forms with all the relevant information.The email looks like this:<img width="520" alt="image" src="https://user-images.githubusercontent.com/108757980/206535103-1ef47d5f-19a4-42e6-9426-59798440f372.png">
+  Step 8 - We have also configured the user to get email automatically on the account they mentioned in Google Forms with all the relevant information.The email looks like this:
+  
+  <img width="520" alt="image" src="https://user-images.githubusercontent.com/108757980/206535103-1ef47d5f-19a4-42e6-9426-59798440f372.png">
 
 
 
