@@ -1,0 +1,57 @@
+// Create your own GitHub personal access token and keep changing path for each of your uploaded Terraform script (each repo should have the Terraform script as well as provider.tf) in the url section.
+
+
+pipeline {
+    agent any
+    
+    parameters {
+        
+        choice (name: 'ACTION',
+                choices: ['apply', 'destroy']
+                )
+        
+    }
+    
+    
+   
+    stages {
+        stage('Git checkout') {
+           steps{
+                git branch: 'main', credentialsId: 'github-personal-access-token', url: 'https://github.com'
+            }
+        }
+        
+        stage('terraform Init') {
+            steps{
+                bat 'terraform init'
+            }
+        }
+        
+        stage('terraform plan') {
+            steps{
+                bat 'terraform plan -out=plan.out'
+            }
+        }
+        
+        
+        
+        stage('Terraform apply or destroy') {
+            steps {
+               
+            
+                script {
+                    if (params.ACTION == "destroy"){
+                        
+                         bat 'terraform destroy -auto-approve'
+                } else {
+                                          
+                         bat 'terraform apply -refresh=true -auto-approve'  
+                }  // if
+                }
+            
+            } //steps
+        }  //stage
+    }
+} 
+
+    
