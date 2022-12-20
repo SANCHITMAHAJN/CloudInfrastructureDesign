@@ -47,6 +47,13 @@ Step 5 - Test the working!
 
 
 
+**Security Considerations**
+
+> The whole infrastructure including EC2 VPCs are created in the private subnet, inaccessible to the public.
+> The webserver VPC has a public elastic IP but has security groups to allow only http(s) and ssh traffic.
+
+
+
 **Libraries/Extensions Needed**
 
 For Python - 
