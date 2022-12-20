@@ -31,15 +31,19 @@ This project gets user requirements via Google Form and automatically creates in
   
 **How to do it?**
 
- Step 1 - Use the python code mentioned, and replace the following values:
+Step 1 - Create the Google Form and note down the FormID (on the url bar) and QuestionIDs for each question (use gformfetch.py to extract the result you said Yes to)
+
+ Step 2 - Use the python code mentioned, and replace the following values:
            Google Form ID
            QuestionIDs
            Jenkins username and password
            sender/receiver email address
            
-Step 2 - Create Terraform scripts and modify it according to your needs. Add your access keys in provider.tf and upload them to GitHub.
-Step 3 - Create a Jenkins pipeline (uploaded here) for each feature like VPC, adminacc, etc.
-Step 4 - Test the working!
+Step 3 - Create Terraform scripts and modify it according to your needs. Add your access keys in provider.tf and upload them to GitHub.
+
+Step 4 - Create a Jenkins pipeline (uploaded here) for each feature like VPC, adminacc, etc.
+
+Step 5 - Test the working!
 
 
 
