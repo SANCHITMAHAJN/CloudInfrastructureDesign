@@ -2,8 +2,7 @@
 This project gets user requirements via Google Form and automatically creates infrastructure in AWS based on the responses using Python, Jenkins, and Terraform.
 
 
-
-<img width="528" alt="image" src="https://user-images.githubusercontent.com/108757980/206535660-00f7d49a-7167-4612-9b2c-1517fe25a02a.png">
+<img width="408" alt="image" src="https://user-images.githubusercontent.com/108757980/208768915-732f0beb-25dc-4835-be9b-afa185940708.png">
 
 
 
@@ -30,3 +29,35 @@ This project gets user requirements via Google Form and automatically creates in
 
 
   
+**How to do it?**
+
+ Step 1 - Use the python code mentioned, and replace the following values:
+           Google Form ID
+           QuestionIDs
+           Jenkins username and password
+           sender/receiver email address
+           
+Step 2 - Create Terraform scripts and modify it according to your needs. Add your access keys in provider.tf and upload them to GitHub.
+Step 3 - Create a Jenkins pipeline (uploaded here) for each feature like VPC, adminacc, etc.
+Step 4 - Test the working!
+
+
+
+**Libraries/Extensions Needed**
+
+For Python - 
+from __future__ import print_function
+from apiclient import discovery
+from httplib2 import Http
+from oauth2client import client, file, tools
+import jenkins
+from email.message import EmailMessage
+import ssl
+import smtplib
+
+
+For Jenkins:
+Terraform Plugin
+
+
+For any queries, please message me on LinkedIn : https://www.linkedin.com/in/sanchitmahajan28/
